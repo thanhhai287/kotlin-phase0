@@ -1,0 +1,1 @@
+- Dùng Scanner.nextInt() sẽ xuất hiện lỗi InputMismatchException nếu tôi chưa guard khi gõ chữ sẽ xuất hiện lỗi 
