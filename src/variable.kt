@@ -28,5 +28,5 @@ fun main () {
     // giá trị của nguoiChoi1 chính xác là 1 con trỏ, và giá trị của con trỏ là bị val khóa (ở đây là mutableList) không để đổi sang ImmutableList hay giá trị khác như Int, String,...
     // bản chất có thể add vì đó là tính chất của mutableList, không nằm ở biến
     // Nếu thêm  val a: List<String> = nguoiChoiList, thì vẫn thấy Minh vì lúc này đang trỏ tới nguoiChoiList nên vẫn thấy được toàn bộ giá trị của nguoiChoiList
-    // nhưng nếu a.add("Minh") thì không thể complie vì lúc này biến a đã được cast thành immutableList, mà bản chất của immuTableList thì không thể thêm được data
+    // nhưng nếu a.add("Minh") thì không thể complie vì lúc này biến a đã được khai báo bằng type List, và quyền năng đã được dodoir hteo list
 }
