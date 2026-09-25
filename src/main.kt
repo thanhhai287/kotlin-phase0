@@ -40,5 +40,6 @@ fun main () {
 
 //    val x = 10
 //    x = "abc" -> lỗi ghi gõ
+
 }
 
