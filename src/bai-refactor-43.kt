@@ -8,9 +8,9 @@
 //   3. Mỗi dấu `?` còn sót lại phải NÓI ĐÚNG SỰ THẬT — cái nào không thể null
 //      thì đừng khai `?` cho "an toàn".
 
-class NguoiChoi(val ten: String?, val hangThanhVien: String?)
+class NguoiChoi(val ten: String?, val hangThanhVien: String)
 
-class Phong(val ma: String?, val chuPhong: NguoiChoi?, val soNguoi: Int?)
+class Phong(val ma: String, val chuPhong: NguoiChoi?, val soNguoi: Int)
 
 fun timPhong(ma: String?): Phong? {
     if (ma == null) {
@@ -30,35 +30,15 @@ fun timPhong(ma: String?): Phong? {
 
 fun nhanChuPhong(maPhong: String?): String? {
     val phong = timPhong(maPhong)
-    if (phong != null) {
-        val chu = phong.chuPhong
-        if (chu != null) {
-            val ten = chu.ten
-            if (ten != null) {
-                var hang = chu.hangThanhVien
-                if (hang == null) {
-                    hang = "THUONG"
-                }
-                return "Chu phong " + ten + " (" + hang + ")"
-            } else {
-                return null
-            }
-        } else {
-            return null
-        }
-    }
-    return null
+    val chu = phong?.chuPhong ?: return null
+    val ten = chu.ten ?: return null
+    val hang = chu.hangThanhVien
+    return "Chu phong " + ten + " (" + hang + ")"
 }
 
 fun soNguoiHienThi(maPhong: String?): String {
-    val phong = timPhong(maPhong)
-    if (phong == null) {
-        return "khong ro"
-    }
-    val n = phong.soNguoi
-    if (n == null) {
-        return "khong ro"
-    }
+    val phong = timPhong(maPhong) ?: return "khong ro"
+    val n = phong.soNguoi ?: "khong ro"
     return n.toString() + " nguoi"
 }
 

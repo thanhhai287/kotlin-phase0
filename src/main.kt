@@ -41,5 +41,9 @@ fun main () {
 //    val x = 10
 //    x = "abc" -> lỗi ghi gõ
 
+    val a : String = "a"
+    val b: String? = null
+    println(a)
+    println(b)
 }
 
