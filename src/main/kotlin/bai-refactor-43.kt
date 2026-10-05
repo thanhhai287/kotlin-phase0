@@ -1,3 +1,4 @@
+package choi.phong
 // ĐỀ BÀI module 4.3 — 40 dòng "giọng Java".
 // File này do AI SINH RA làm đề, KHÔNG phải code của learner.
 //
@@ -38,7 +39,7 @@ fun nhanChuPhong(maPhong: String?): String? {
 
 fun soNguoiHienThi(maPhong: String?): String {
     val phong = timPhong(maPhong) ?: return "khong ro"
-    val n = phong.soNguoi ?: "khong ro"
+    val n = phong.soNguoi
     return n.toString() + " nguoi"
 }
 
