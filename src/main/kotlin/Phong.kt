@@ -30,11 +30,23 @@ fun kiemTraCauHinhPhong(cauHinhPhong : CauHinhPhong) : List<String> {
 
 fun main() {
     val cauHinhPhong1 = CauHinhPhong(kichThuoc = 2, luatThang =  1, matKhau = null,  thoiGianGioiHan = null)
-    val cauHinhPhong2 = CauHinhPhong(kichThuoc = 1, luatThang =  2, matKhau = null, thoiGianGioiHan = null)
+    val cauHinhPhong2 = CauHinhPhong(kichThuoc = 2, luatThang =  3, matKhau = null, thoiGianGioiHan = null)
     val cauHinhPhong3 = CauHinhPhong(kichThuoc = 3, luatThang =  4, matKhau = "ab", thoiGianGioiHan = 4)
     val cauHinhPhong4 = CauHinhPhong(kichThuoc = 4, luatThang =  4, matKhau = null, thoiGianGioiHan = null)
     println(kiemTraCauHinhPhong(cauHinhPhong1))
     println(kiemTraCauHinhPhong(cauHinhPhong2))
     println(kiemTraCauHinhPhong(cauHinhPhong3))
     println(kiemTraCauHinhPhong(cauHinhPhong4))
+
+
+    for (i in 3 .. 2 )
+    {
+     println(i)
+    }
+
+
+    for (i in 2 .. 3 )
+    {
+        println(i)
+    }
 }
